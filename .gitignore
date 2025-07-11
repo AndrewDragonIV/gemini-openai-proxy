@@ -1,0 +1,14 @@
+.env
+node_modules/
+.idea/
+.vscode/
+.zed/
+
+bun.lockb
+pnpm-lock.yaml
+
+.DS_Store
+.wrangler/
+
+coverage/
+vendor/

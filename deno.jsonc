@@ -1,0 +1,34 @@
+{
+  "exclude": ["./dist", "./coverage"],
+  "lock": {
+    "frozen": false
+  },
+  "tasks": {
+    "start:deno": "deno run --allow-net --allow-env main_deno.ts",
+    "build:deno": "deno run -A build.ts",
+    "test:deno": "deno test --allow-net --allow-env --coverage"
+  },
+  "imports": {
+    "openapi-format": "https://esm.sh/openapi-format?bundle",
+    "itty-router/": "npm:/itty-router/",
+    "eventsource-parser/": "npm:/eventsource-parser/",
+    "@hono/node-server": "npm:/@hono/node-server"
+  },
+  "nodeModulesDir": "none",
+  "fmt": {
+    "exclude": ["*"]
+  },
+  "compilerOptions": {
+    "useUnknownInCatchVariables": false,
+    "lib": [
+      "ESNext.Array",
+      "DOM",
+      "DOM.AsyncIterable",
+      "DOM.Iterable",
+      "ESNext",
+      "ESNext.Disposable",
+      "ESNext.AsyncIterable",
+      "deno.ns"
+    ]
+  }
+}

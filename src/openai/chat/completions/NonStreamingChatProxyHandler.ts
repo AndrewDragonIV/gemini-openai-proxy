@@ -61,7 +61,7 @@ export async function nonStreamingChatProxyHandler(
           message: {
             role: "assistant",
             refusal: null,
-            content: null,
+            content: "", // ИЗМЕНЕНО: теперь пустая строка вместо null
             function_call: {
               name: content.name ?? "",
               arguments: JSON.stringify(content.args),
